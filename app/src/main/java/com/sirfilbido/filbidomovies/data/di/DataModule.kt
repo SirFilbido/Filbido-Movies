@@ -1,6 +1,8 @@
 package com.sirfilbido.filbidomovies.data.di
 
 import android.util.Log
+import com.sirfilbido.filbidomovies.data.repository.MovieRepository
+import com.sirfilbido.filbidomovies.data.repository.MovieRepositoryImpl
 import com.sirfilbido.filbidomovies.data.services.movie.MovieService
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
@@ -18,8 +20,13 @@ private const val BASE_URL_POSTER = "https://image.tmdb.org/t/p/original/"
 private const val OK_HTTP = "Ok Http"
 
 fun dataModule() = arrayListOf(
+    repositoryModules(),
     networkModule()
 )
+
+private fun repositoryModules() = module {
+    single<MovieRepository> { MovieRepositoryImpl(get()) }
+}
 
 private fun networkModule() = module {
     single {
