@@ -1,7 +1,7 @@
 package com.sirfilbido.filbidomovies.data.di
 
 import android.util.Log
-import com.sirfilbido.filbidomovies.data.services.MovieService
+import com.sirfilbido.filbidomovies.data.services.movie.MovieService
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import okhttp3.Interceptor
