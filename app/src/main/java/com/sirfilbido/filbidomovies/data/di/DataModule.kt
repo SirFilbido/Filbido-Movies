@@ -1,8 +1,11 @@
 package com.sirfilbido.filbidomovies.data.di
 
 import android.util.Log
-import com.sirfilbido.filbidomovies.data.repository.MovieRepository
-import com.sirfilbido.filbidomovies.data.repository.MovieRepositoryImpl
+import com.sirfilbido.filbidomovies.data.repository.genre.GenreRepository
+import com.sirfilbido.filbidomovies.data.repository.genre.GenreRepositoryImpl
+import com.sirfilbido.filbidomovies.data.repository.movie.MovieRepository
+import com.sirfilbido.filbidomovies.data.repository.movie.MovieRepositoryImpl
+import com.sirfilbido.filbidomovies.data.services.genres.GenresService
 import com.sirfilbido.filbidomovies.data.services.movie.MovieService
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
@@ -26,27 +29,20 @@ fun dataModule() = arrayListOf(
 
 private fun repositoryModules() = module {
     single<MovieRepository> { MovieRepositoryImpl(get()) }
+    single<GenreRepository> { GenreRepositoryImpl(get()) }
 }
 
 private fun networkModule() = module {
-    single {
-        createOkHttpClient()
-    }
+    single { createOkHttpClient() }
+    single { Moshi.Builder().add(KotlinJsonAdapterFactory()).build() }
 
-    single {
-        Moshi.Builder().add(KotlinJsonAdapterFactory()).build()
-    }
-
-    single {
-        createService<MovieService>(get(), get())
-    }
+    single { createService<MovieService>(get(), get()) }
+    single { createService<GenresService>(get(), get()) }
 }
 
 private fun createOkHttpClient(): OkHttpClient {
 
-    val interceptor = HttpLoggingInterceptor {
-        Log.e(OK_HTTP, it)
-    }
+    val interceptor = HttpLoggingInterceptor { Log.e(OK_HTTP, it) }
 
     interceptor.level = HttpLoggingInterceptor.Level.BASIC
 
