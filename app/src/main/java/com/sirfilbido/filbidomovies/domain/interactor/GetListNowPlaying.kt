@@ -1,7 +1,7 @@
 package com.sirfilbido.filbidomovies.domain.interactor
 
 import com.sirfilbido.filbidomovies.data.model.Movie
-import com.sirfilbido.filbidomovies.data.repository.MovieRepository
+import com.sirfilbido.filbidomovies.data.repository.movie.MovieRepository
 import com.sirfilbido.filbidomovies.domain.interactor.UseCase.NoParam
 import kotlinx.coroutines.flow.Flow
 

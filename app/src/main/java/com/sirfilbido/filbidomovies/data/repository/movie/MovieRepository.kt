@@ -1,4 +1,4 @@
-package com.sirfilbido.filbidomovies.data.repository
+package com.sirfilbido.filbidomovies.data.repository.movie
 
 import com.sirfilbido.filbidomovies.data.model.Movie
 import kotlinx.coroutines.flow.Flow
