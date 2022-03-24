@@ -1,13 +1,11 @@
 package com.sirfilbido.filbidomovies.presentation.ui.home
 
 import android.os.RemoteException
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
+import androidx.lifecycle.*
 import com.sirfilbido.filbidomovies.data.model.Movie
 import com.sirfilbido.filbidomovies.domain.interactor.movie.GetListNowPlayingUseCase
 import com.sirfilbido.filbidomovies.presentation.ui.State
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.onStart
@@ -18,8 +16,7 @@ class HomeViewModel(
 ) : ViewModel() {
 
     private val _progressBarVisible = MutableLiveData(false)
-    val progressBarVisible: LiveData<Boolean>
-        get() = _progressBarVisible
+    val progressBarVisible: LiveData<Boolean> = _progressBarVisible
 
     fun showProgressBar() {
         _progressBarVisible.value = true
@@ -30,8 +27,7 @@ class HomeViewModel(
     }
 
     private val _snackbar = MutableLiveData<String?>(null)
-    val snackbar: LiveData<String?>
-        get() = _snackbar
+    val snackbar: LiveData<String?> = _snackbar
 
     fun onSnackBarShown() {
         _snackbar.value = null
@@ -45,14 +41,30 @@ class HomeViewModel(
             _getListNowPlayingUseCase()
                 .onStart {
                     _listMovie.postValue(State.Loading)
-//                    delay(800)
+                    delay(800)
                 }.catch {
-                    with(RemoteException("Could not connect to API")) {
+                    with(RemoteException("Could not connect to TMDB")) {
                         _listMovie.postValue(State.Error(this))
                     }
                 }.collect {
                     _listMovie.postValue(State.Success(it))
                 }
+        }
+    }
+
+    val helloText = Transformations.map(listMovie) {
+        listMovie.let {
+            when (it.value) {
+                State.Loading -> {
+                    "🎬 Loading movies from TMDB..."
+                }
+                is State.Error -> {
+                    "We have a problem! :'("
+                }
+                else -> {
+                    ""
+                }
+            }
         }
     }
 }
