@@ -42,6 +42,7 @@ class GetListNowPlayingUseCase(
                         poster = movie.poster,
                         title = movie.title,
                         overview = movie.title,
+                        releaseDate = movie,
                         genres = listGenres
                     )
                 )

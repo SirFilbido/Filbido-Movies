@@ -7,10 +7,7 @@ import androidx.annotation.RequiresApi
 import androidx.databinding.BindingAdapter
 import androidx.swiperefreshlayout.widget.CircularProgressDrawable
 import com.bumptech.glide.Glide
-import com.google.android.material.chip.Chip
 import com.sirfilbido.filbidomovies.data.model.Movie
-import java.time.ZoneId
-import java.time.ZoneOffset
 import java.time.format.DateTimeFormatter
 
 @BindingAdapter("moviePoster")
@@ -35,14 +32,10 @@ fun TextView.setMovieTitle(movie: Movie?) {
 }
 
 @RequiresApi(Build.VERSION_CODES.O)
-@BindingAdapter("imagePublishedDate")
-fun Chip.setUpdate(image: Image?) {
-    val formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy")
-        .withZone(ZoneId.from(ZoneOffset.UTC))
-    with(formatter) {
-        image?.let {
-            val date = Date(image.timestamp)
-            text = this.format(date.toInstant())
-        }
+@BindingAdapter("movieReleaseDate")
+fun TextView.setMovieReleaseDate(movie: Movie?) {
+    movie?.let {
+        val formatters = DateTimeFormatter.ofPattern("dd/MM/yyyy")
+        text = movie.releaseDate.format(formatters)
     }
 }
