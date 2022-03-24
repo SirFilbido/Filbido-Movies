@@ -17,9 +17,28 @@ class HomeViewModel(
     private val _getListNowPlayingUseCase: GetListNowPlayingUseCase,
 ) : ViewModel() {
 
+    private val _progressBarVisible = MutableLiveData(false)
+    val progressBarVisible: LiveData<Boolean>
+        get() = _progressBarVisible
+
+    fun showProgressBar() {
+        _progressBarVisible.value = true
+    }
+
+    fun hideProgressBar() {
+        _progressBarVisible.value = false
+    }
+
+    private val _snackbar = MutableLiveData<String?>(null)
+    val snackbar: LiveData<String?>
+        get() = _snackbar
+
+    fun onSnackBarShown() {
+        _snackbar.value = null
+    }
+
     private val _listMovie = MutableLiveData<State<List<Movie>>>()
-    val listMovie: LiveData<State<List<Movie>>>
-        get() = _listMovie
+    val listMovie: LiveData<State<List<Movie>>> = _listMovie
 
     fun fetchMovies() {
         viewModelScope.launch {

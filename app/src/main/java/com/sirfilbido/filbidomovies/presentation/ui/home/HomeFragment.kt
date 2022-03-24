@@ -1,32 +1,76 @@
 package com.sirfilbido.filbidomovies.presentation.ui.home
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.sirfilbido.filbidomovies.R
+import com.google.android.material.snackbar.Snackbar
+import com.sirfilbido.filbidomovies.databinding.HomeFragmentBinding
+import com.sirfilbido.filbidomovies.presentation.State
+import com.sirfilbido.filbidomovies.presentation.adapter.home.MovieListAdapter
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class HomeFragment : Fragment() {
 
-    companion object {
-        fun newInstance() = HomeFragment()
+    private val viewModel: HomeViewModel by viewModel()
+    private val binding: HomeFragmentBinding by lazy {
+        HomeFragmentBinding.inflate(layoutInflater)
     }
-
-    private lateinit var viewModel: HomeViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        return inflater.inflate(R.layout.home_fragment, container, false)
+        initBinding()
+        initSnackbar()
+        initRecyclerView()
+
+        return binding.root
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(HomeViewModel::class.java)
-        // TODO: Use the ViewModel
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        viewModel.fetchMovies()
+    }
+
+    private fun initSnackbar() {
+        viewModel.snackbar.observe(viewLifecycleOwner) {
+            it?.let { errorMessage ->
+                Snackbar.make(
+                    binding.root, errorMessage,
+                    Snackbar.LENGTH_LONG
+                ).show()
+                viewModel.onSnackBarShown()
+            }
+        }
+    }
+
+    private fun initRecyclerView() {
+
+        val adapter = MovieListAdapter()
+        binding.homeRv.adapter = adapter
+
+        viewModel.listMovie.observe(viewLifecycleOwner) {
+            when (it) {
+                State.Loading -> {
+                    viewModel.showProgressBar()
+                }
+                is State.Error -> {
+                    viewModel.hideProgressBar()
+                }
+                is State.Success -> {
+                    viewModel.hideProgressBar()
+                    adapter.submitList(it.result)
+                }
+            }
+        }
+
+    }
+
+    private fun initBinding() {
+        binding.viewModel = viewModel
+        binding.lifecycleOwner = viewLifecycleOwner
     }
 
 }

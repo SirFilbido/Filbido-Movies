@@ -9,5 +9,5 @@ fun presentationModule() = arrayListOf(
 )
 
 private fun viewModelModule() = module {
-    viewModel { HomeViewModel() }
+    viewModel { HomeViewModel(get()) }
 }
