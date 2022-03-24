@@ -24,7 +24,8 @@ private const val OK_HTTP = "Ok Http"
 
 fun dataModule() = arrayListOf(
     repositoryModules(),
-    networkModule()
+    serviceModule(),
+    networkModule(),
 )
 
 private fun repositoryModules() = module {
@@ -32,12 +33,14 @@ private fun repositoryModules() = module {
     single<GenreRepository> { GenreRepositoryImpl(get()) }
 }
 
+private fun serviceModule() = module {
+    single { createService<MovieService>(get(), get()) }
+    single { createService<GenresService>(get(), get()) }
+}
+
 private fun networkModule() = module {
     single { createOkHttpClient() }
     single { Moshi.Builder().add(KotlinJsonAdapterFactory()).build() }
-
-    single { createService<MovieService>(get(), get()) }
-    single { createService<GenresService>(get(), get()) }
 }
 
 private fun createOkHttpClient(): OkHttpClient {
