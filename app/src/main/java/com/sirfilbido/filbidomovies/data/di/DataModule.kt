@@ -19,7 +19,6 @@ import retrofit2.converter.moshi.MoshiConverterFactory
 
 private const val BASE_URL = "https://api.themoviedb.org/3/"
 private const val API_KEY = "04e284eb8b886be8418c1811e07c57f6"
-private const val BASE_URL_POSTER = "https://image.tmdb.org/t/p/original/"
 private const val OK_HTTP = "Ok Http"
 
 fun dataModule() = arrayListOf(
@@ -45,7 +44,7 @@ private fun networkModule() = module {
 
 private fun createOkHttpClient(): OkHttpClient {
 
-    val interceptor = HttpLoggingInterceptor { Log.e(OK_HTTP, it) }
+    val interceptor = HttpLoggingInterceptor { Log.i(OK_HTTP, it) }
 
     interceptor.level = HttpLoggingInterceptor.Level.BASIC
 
@@ -61,7 +60,6 @@ private inline fun <reified T> createService(
 ): T {
     return Retrofit.Builder()
         .baseUrl(BASE_URL)
-        .baseUrl(BASE_URL_POSTER)
         .client(client)
         .addConverterFactory(MoshiConverterFactory.create(factory))
         .build()

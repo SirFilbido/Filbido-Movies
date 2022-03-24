@@ -15,7 +15,7 @@ class GenreRepositoryImpl(
             val imageList = _service.getAllGenres()
             emit(imageList.genres)
         } catch (error: HttpException) {
-            throw RemoteException("Unable to retrieve images")
+            throw RemoteException("Unable to retrieve genres in TMDB")
         }
     }
 }

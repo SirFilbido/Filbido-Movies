@@ -10,6 +10,8 @@ import com.bumptech.glide.Glide
 import com.sirfilbido.filbidomovies.data.model.Movie
 import java.time.format.DateTimeFormatter
 
+private const val BASE_URL_POSTER = "https://image.tmdb.org/t/p/original/"
+
 @BindingAdapter("moviePoster")
 fun ImageView.setMoviePoster(movie: Movie?) {
     movie?.let {
@@ -19,7 +21,7 @@ fun ImageView.setMoviePoster(movie: Movie?) {
         circularProgressDrawable.centerRadius = 30f
         circularProgressDrawable.start()
 
-        Glide.with(this).load(movie.poster)
+        Glide.with(this).load("$BASE_URL_POSTER${movie.poster}")
             .placeholder(circularProgressDrawable).into(this)
     }
 }

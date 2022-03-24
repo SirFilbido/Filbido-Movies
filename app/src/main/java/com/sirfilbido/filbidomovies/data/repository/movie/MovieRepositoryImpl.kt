@@ -16,7 +16,7 @@ class MovieRepositoryImpl(
             val imageList = _service.getListNowPlaying()
             emit(imageList.results)
         } catch (error: HttpException) {
-            throw RemoteException("Unable to retrieve images")
+            throw RemoteException("Unable to retrieve movies in TMDB")
         }
     }
 }
