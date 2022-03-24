@@ -1,5 +1,6 @@
 package com.sirfilbido.filbidomovies.domain.di
 
+import com.sirfilbido.filbidomovies.domain.interactor.genre.GetGenresUseCase
 import com.sirfilbido.filbidomovies.domain.interactor.movie.GetListNowPlayingUseCase
 import org.koin.dsl.module
 
@@ -8,5 +9,6 @@ fun domainModule() = arrayListOf(
 )
 
 private fun useCaseModule() = module {
-    factory { GetListNowPlayingUseCase(get()) }
+    factory { GetListNowPlayingUseCase(get(), get()) }
+    factory { GetGenresUseCase(get()) }
 }
