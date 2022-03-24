@@ -1,5 +1,6 @@
 package com.sirfilbido.filbidomovies.data.services.movie.response
 
+import com.sirfilbido.filbidomovies.data.model.Movie
 import com.squareup.moshi.Json
 
 class MovieResponse(

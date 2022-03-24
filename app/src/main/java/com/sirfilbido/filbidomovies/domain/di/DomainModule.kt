@@ -1,6 +1,6 @@
 package com.sirfilbido.filbidomovies.domain.di
 
-import com.sirfilbido.filbidomovies.domain.interactor.GetListNowPlayingUseCase
+import com.sirfilbido.filbidomovies.domain.interactor.movie.GetListNowPlayingUseCase
 import org.koin.dsl.module
 
 fun domainModule() = arrayListOf(
