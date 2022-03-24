@@ -1,4 +1,4 @@
-package com.sirfilbido.filbidomovies.presentation.ui.main
+package com.sirfilbido.filbidomovies.presentation.ui.home
 
 import androidx.lifecycle.ViewModel
 
