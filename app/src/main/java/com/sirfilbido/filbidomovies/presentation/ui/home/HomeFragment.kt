@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.google.android.material.snackbar.Snackbar
 import com.sirfilbido.filbidomovies.databinding.HomeFragmentBinding
-import com.sirfilbido.filbidomovies.presentation.State
+import com.sirfilbido.filbidomovies.presentation.ui.State
 import com.sirfilbido.filbidomovies.presentation.adapter.home.MovieListAdapter
 import org.koin.androidx.viewmodel.ext.android.viewModel
 

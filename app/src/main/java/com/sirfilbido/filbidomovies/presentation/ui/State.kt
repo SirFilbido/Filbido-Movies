@@ -1,4 +1,4 @@
-package com.sirfilbido.filbidomovies.presentation
+package com.sirfilbido.filbidomovies.presentation.ui
 // Essa clase foi desenvolida por Francisco Rasia da Chicória Labs
 
 /**

@@ -1,4 +1,4 @@
-package com.sirfilbido.filbidomovies.presentation
+package com.sirfilbido.filbidomovies.presentation.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
