@@ -1,0 +1,402 @@
+{
+  "dates": {
+    "maximum": "2022-03-21",
+    "minimum": "2022-02-01"
+  },
+  "page": 2,
+  "results": [
+    {
+      "adult": false,
+      "backdrop_path": "/70AV2Xx5FQYj20labp0EGdbjI6E.jpg",
+      "genre_ids": [
+        28,
+        80,
+        53
+      ],
+      "id": 637649,
+      "original_language": "en",
+      "original_title": "Wrath of Man",
+      "overview": "A cold and mysterious new security guard for a Los Angeles cash truck company surprises his co-workers when he unleashes precision skills during a heist. The crew is left wondering who he is and where he came from. Soon, the marksman's ultimate motive becomes clear as he takes dramatic and irrevocable steps to settle a score.",
+      "popularity": 303.752,
+      "poster_path": "/M7SUK85sKjaStg4TKhlAVyGlz3.jpg",
+      "release_date": "2021-04-22",
+      "title": "Wrath of Man",
+      "video": false,
+      "vote_average": 7.7,
+      "vote_count": 3424
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/f2J8DpT5bqV0AiI9VVcfiuqKo5l.jpg",
+      "genre_ids": [
+        35,
+        99,
+        28
+      ],
+      "id": 656663,
+      "original_language": "en",
+      "original_title": "Jackass Forever",
+      "overview": "Celebrate the joy of a perfectly executed shot to the groin as Johnny Knoxville, Steve-O and the rest of the gang return alongside some newcomers for one final round of hilarious, wildly absurd and often dangerous displays of stunts and comedy.",
+      "popularity": 290.982,
+      "poster_path": "/ugIdyvtAzHWOguD91UjHKoAvfum.jpg",
+      "release_date": "2022-02-01",
+      "title": "Jackass Forever",
+      "video": false,
+      "vote_average": 7.1,
+      "vote_count": 84
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/dNj8UsgfKndTFUV7xvNijilQHQZ.jpg",
+      "genre_ids": [
+        28,
+        80,
+        53
+      ],
+      "id": 763285,
+      "original_language": "en",
+      "original_title": "Ambulance",
+      "overview": "Decorated veteran Will Sharp, desperate for money to cover his wife's medical bills, asks for help from his adoptive brother Danny. A charismatic career criminal, Danny instead offers him a score: the biggest bank heist in Los Angeles history: $32 million.",
+      "popularity": 290.351,
+      "poster_path": "/zT5ynZ0UR6HFfWQSRf2uKtqCyWD.jpg",
+      "release_date": "2022-03-16",
+      "title": "Ambulance",
+      "video": false,
+      "vote_average": 7.3,
+      "vote_count": 16
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/ejgC2lEmuGXiP0A1LvwNezUjNmt.jpg",
+      "genre_ids": [
+        28,
+        12,
+        878
+      ],
+      "id": 406759,
+      "original_language": "en",
+      "original_title": "Moonfall",
+      "overview": "A mysterious force knocks the moon from its orbit around Earth and sends it hurtling on a collision course with life as we know it.",
+      "popularity": 273.48,
+      "poster_path": "/odVv1sqVs0KxBXiA8bhIBlPgalx.jpg",
+      "release_date": "2022-02-03",
+      "title": "Moonfall",
+      "video": false,
+      "vote_average": 6,
+      "vote_count": 212
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/cDeVOtWlRYQ8lHfGyOtaiDi5Yg0.jpg",
+      "genre_ids": [
+        18
+      ],
+      "id": 551478,
+      "original_language": "id",
+      "original_title": "Jakarta vs Everybody",
+      "overview": "About young boy DOM 23th , is trying everything to achieve his dream as an actor but Dom uses his acting skill to drugs courier",
+      "popularity": 249.915,
+      "poster_path": "/8HvzDfeAP80Rzuae8hSRgT2d18N.jpg",
+      "release_date": "2022-03-19",
+      "title": "Jakarta, City of Dreamers",
+      "video": false,
+      "vote_average": 5.3,
+      "vote_count": 2
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/5P0PtxIneLNMq7m0crF1R9Sjzpv.jpg",
+      "genre_ids": [
+        27,
+        53
+      ],
+      "id": 610253,
+      "original_language": "en",
+      "original_title": "Halloween Kills",
+      "overview": "The nightmare isn't over as unstoppable killer Michael Myers escapes from Laurie Strode's trap to continue his ritual bloodbath. Injured and taken to the hospital, Laurie fights through the pain as she inspires residents of Haddonfield, to rise up against Myers. Taking matters into their own hands, the Strode women and other survivors form a vigilante mob to hunt down Michael and end his reign of terror once and for all.",
+      "popularity": 235.735,
+      "poster_path": "/qmJGd5IfURq8iPQ9KF3les47vFS.jpg",
+      "release_date": "2021-10-14",
+      "title": "Halloween Kills",
+      "video": false,
+      "vote_average": 6.7,
+      "vote_count": 1622
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/8ISY1jghKbT9lbahxhxvHsX17ji.jpg",
+      "genre_ids": [
+        16,
+        10751
+      ],
+      "id": 823609,
+      "original_language": "en",
+      "original_title": "Monster Family 2",
+      "overview": "To free Baba Yaga and Renfield from the clutches of Monster Hunter Mila Starr, the Wishbone Family once more transforms into a Vampire, Frankenstein's Monster, a Mummy and a Werewolf but when aided by their three pet bats, the Monster Family zooms around the world again to save their friends, make new monstrous acquaintances.",
+      "popularity": 191.626,
+      "poster_path": "/ypT4MsOuJrrFtlGShj3DrllIHN3.jpg",
+      "release_date": "2021-01-13",
+      "title": "Monster Family 2",
+      "video": false,
+      "vote_average": 7.1,
+      "vote_count": 28
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/3GgkzCDq6KYpcmJmcOKh27hYRyj.jpg",
+      "genre_ids": [
+        12,
+        16,
+        10751,
+        14
+      ],
+      "id": 588921,
+      "original_language": "en",
+      "original_title": "Ainbo: Spirit of the Amazon",
+      "overview": "An epic journey of a young hero and her Spirit Guides, 'Dillo' a cute and humorous armadillo and \"Vaca\" a goofy oversized tapir, who embark on a quest to save their home in the spectacular Amazon Rainforest.",
+      "popularity": 187.9,
+      "poster_path": "/l8HyObVj8fPrzacAPtGWWLDhcfh.jpg",
+      "release_date": "2021-02-09",
+      "title": "Ainbo: Spirit of the Amazon",
+      "video": false,
+      "vote_average": 7.1,
+      "vote_count": 292
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/fbTxsnJcQwuwzCEu9VEiU9lV75Y.jpg",
+      "genre_ids": [
+        28
+      ],
+      "id": 645788,
+      "original_language": "en",
+      "original_title": "The Protégé",
+      "overview": "Rescued as a child by the legendary assassin Moody and trained in the family business, Anna is the world’s most skilled contract killer. When Moody, the man who was like a father to her and taught her everything she needs to know about trust and survival, is brutally killed, Anna vows revenge. As she becomes entangled with an enigmatic killer whose attraction to her goes way beyond cat and mouse, their confrontation turns deadly and the loose ends of a life spent killing will weave themselves ever tighter.",
+      "popularity": 178.95,
+      "poster_path": "/o9FY8N5c8CXf22q8s4CmRRjAQJx.jpg",
+      "release_date": "2021-08-19",
+      "title": "The Protégé",
+      "video": false,
+      "vote_average": 6.6,
+      "vote_count": 553
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/8T7SS4jU7TmtqrUr45JgZASCTUP.jpg",
+      "genre_ids": [
+        18,
+        35
+      ],
+      "id": 626735,
+      "original_language": "en",
+      "original_title": "Dog",
+      "overview": "An army ranger and his dog embark on a road trip along the Pacific Coast Highway to attend a friend's funeral.",
+      "popularity": 176.321,
+      "poster_path": "/zHQy4h36WwuCetKS7C3wcT1hkgA.jpg",
+      "release_date": "2022-02-17",
+      "title": "Dog",
+      "video": false,
+      "vote_average": 7.6,
+      "vote_count": 143
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/95SwyPKoWGK35zOnAjikra7OFIQ.jpg",
+      "genre_ids": [
+        18,
+        36
+      ],
+      "id": 614917,
+      "original_language": "en",
+      "original_title": "King Richard",
+      "overview": "The story of how Richard Williams served as a coach to his daughters Venus and Serena, who will soon become two of the most legendary tennis players in history.",
+      "popularity": 174.403,
+      "poster_path": "/2dfujXrxePtYJPiPHj1HkAFQvpu.jpg",
+      "release_date": "2021-11-18",
+      "title": "King Richard",
+      "video": false,
+      "vote_average": 8,
+      "vote_count": 943
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/xeEDb8pIxdHlEPdt6SCtOpMrghx.jpg",
+      "genre_ids": [
+        18,
+        10749,
+        10402
+      ],
+      "id": 640265,
+      "original_language": "en",
+      "original_title": "The Sky Is Everywhere",
+      "overview": "Lennie is a teen musical prodigy grieving the death of her sister when she finds herself caught between a new guy at school and her sister's devastated boyfriend. Through her vivid imagination and conflicted heart, Lennie navigates first love and first loss.",
+      "popularity": 169.037,
+      "poster_path": "/qMVUlq6rdqFo1xZ5ozQcKFCDbgj.jpg",
+      "release_date": "2022-02-11",
+      "title": "The Sky Is Everywhere",
+      "video": false,
+      "vote_average": 5.5,
+      "vote_count": 19
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/oMInUMAoiIDdAXCGTb3COnwokH6.jpg",
+      "genre_ids": [
+        99
+      ],
+      "id": 947055,
+      "original_language": "es",
+      "original_title": "1918: La gripe española",
+      "overview": "In Spain, the worst known pandemic decimated the population, with 80% mortality among children. Spain was half empty. There are documents from the time that give us testimony, but why do we hardly know anything about this \"Spanish flu\"? Surely his study and knowledge would have helped us correct errors in later pandemics.",
+      "popularity": 155.593,
+      "poster_path": "/UI9GSnR6jyLYEALFr9Eu6EbgID.jpg",
+      "release_date": "2022-03-03",
+      "title": "1918: The Spanish Flu",
+      "video": false,
+      "vote_average": 2,
+      "vote_count": 1
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/lRbDyjI7HEaXxflFQbYpqHRGFBJ.jpg",
+      "genre_ids": [
+        9648,
+        80,
+        18,
+        53
+      ],
+      "id": 505026,
+      "original_language": "en",
+      "original_title": "Death on the Nile",
+      "overview": "Belgian sleuth Hercule Poirot boards a glamorous river steamer with enough champagne to fill the Nile. But his Egyptian vacation turns into a thrilling search for a murderer when a picture-perfect couple’s idyllic honeymoon is tragically cut short.",
+      "popularity": 140.693,
+      "poster_path": "/oT4vRVzulbN72602tTPFCwotl7a.jpg",
+      "release_date": "2022-02-09",
+      "title": "Death on the Nile",
+      "video": false,
+      "vote_average": 6.7,
+      "vote_count": 619
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/1GrURa0tEBIBjJ2EbeRsMP65YPK.jpg",
+      "genre_ids": [
+        14,
+        18,
+        10749,
+        36
+      ],
+      "id": 245842,
+      "original_language": "en",
+      "original_title": "The King's Daughter",
+      "overview": "King Louis XIV's quest for immortality leads him to capture and steal a mermaid's life force, a move that is further complicated by his illegitimate daughter's discovery of the creature.",
+      "popularity": 133.555,
+      "poster_path": "/nCRfr3eOlwH7wfxaz6cU1bhMR1W.jpg",
+      "release_date": "2022-01-21",
+      "title": "The King's Daughter",
+      "video": false,
+      "vote_average": 7.4,
+      "vote_count": 399
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/VxMs7PvSG38fhkYli9o2mLsllD.jpg",
+      "genre_ids": [
+        35,
+        10749
+      ],
+      "id": 892835,
+      "original_language": "en",
+      "original_title": "Book of Love",
+      "overview": "Henry, an english writer who has written a new book that has become a failure in the U.K, gets notified that the dull book has been highly trending over in Mexico. Little does he know that Maria, a spanish translator, turned the book into an erotic novel. Henry and Maria then swerve around Mexico to do a book tour and go through a wind of events.",
+      "popularity": 132.604,
+      "poster_path": "/aU4cUkmn8CqnBYlYgE2sHlZ2AGy.jpg",
+      "release_date": "2022-01-06",
+      "title": "Book of Love",
+      "video": false,
+      "vote_average": 5.4,
+      "vote_count": 24
+    },
+    {
+      "adult": false,
+      "backdrop_path": null,
+      "genre_ids": [
+        35,
+        10751,
+        10749
+      ],
+      "id": 937337,
+      "original_language": "es",
+      "original_title": "¡Qué Despadre!",
+      "overview": "Pedro is a single man in his forties who likes to party, has no children and lives at night. Everything changes when he meets Alin. She mentions to him that she is looking for her dad and that there is a high probability that it is him.",
+      "popularity": 122.608,
+      "poster_path": "/tStemQsHwaMPoamhVJQFxWAuZAJ.jpg",
+      "release_date": "2022-02-09",
+      "title": "¡Qué Despadre!",
+      "video": false,
+      "vote_average": 5.7,
+      "vote_count": 3
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/5CUdP1wrg4S6yZrDHuW3JLohYLO.jpg",
+      "genre_ids": [
+        99
+      ],
+      "id": 913862,
+      "original_language": "en",
+      "original_title": "Downfall: The Case Against Boeing",
+      "overview": "Investigators reveal how Boeing’s alleged priority of profit over safety could have contributed to two catastrophic crashes within months of each other.",
+      "popularity": 118.687,
+      "poster_path": "/LRPi6b6gpDyKuveut38S8R38NI.jpg",
+      "release_date": "2022-02-09",
+      "title": "Downfall: The Case Against Boeing",
+      "video": false,
+      "vote_average": 7.3,
+      "vote_count": 61
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/uMPJwWDojedB36iowSl3HTLmTjW.jpg",
+      "genre_ids": [
+        16,
+        35,
+        10402,
+        10751
+      ],
+      "id": 812204,
+      "original_language": "en",
+      "original_title": "Rock Dog 2: Rock Around the Park",
+      "overview": "When Bodi and his band 'True Blue' leave Snow Mountain, to tour with pop sensation, Lil' Foxy, they learn that fame comes at a price.",
+      "popularity": 112.754,
+      "poster_path": "/kETYRGA15L0wkVPugSl8lKmSgFn.jpg",
+      "release_date": "2021-06-24",
+      "title": "Rock Dog 2: Rock Around the Park",
+      "video": false,
+      "vote_average": 7,
+      "vote_count": 71
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/2ktD7aMGkIytVRYwahAuktAQ3hO.jpg",
+      "genre_ids": [
+        18,
+        10402,
+        10749
+      ],
+      "id": 776503,
+      "original_language": "en",
+      "original_title": "CODA",
+      "overview": "As a CODA (Child of Deaf Adults), Ruby is the only hearing person in her deaf family. When the family's fishing business is threatened, Ruby finds herself torn between pursuing her love of music and her fear of abandoning her parents.",
+      "popularity": 108.273,
+      "poster_path": "/BzVjmm8l23rPsijLiNLUzuQtyd.jpg",
+      "release_date": "2021-08-11",
+      "title": "CODA",
+      "video": false,
+      "vote_average": 8.1,
+      "vote_count": 744
+    }
+  ],
+  "total_pages": 62,
+  "total_results": 1221
+}
