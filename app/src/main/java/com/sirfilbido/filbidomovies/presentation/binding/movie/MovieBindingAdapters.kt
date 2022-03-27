@@ -1,4 +1,4 @@
-package com.sirfilbido.filbidomovies.presentation.binding.home
+package com.sirfilbido.filbidomovies.presentation.binding.movie
 
 import android.os.Build
 import android.widget.ImageView
@@ -15,6 +15,8 @@ private const val BASE_URL_POSTER = "https://image.tmdb.org/t/p/original/"
 @BindingAdapter("moviePoster")
 fun ImageView.setMoviePoster(movie: Movie?) {
     movie?.let {
+
+        this.clipToOutline = true
 
         val circularProgressDrawable = CircularProgressDrawable(context)
         circularProgressDrawable.strokeWidth = 5f
@@ -40,4 +42,17 @@ fun TextView.setMovieReleaseDate(movie: Movie?) {
         val formatters = DateTimeFormatter.ofPattern("dd/MM/yyyy")
         text = movie.releaseDate.format(formatters)
     }
+}
+
+@BindingAdapter("movieGenre")
+fun TextView.setMovieGenre(movie: Movie?) {
+    movie?.let {
+        val nameGenres = it.genres.map { genre -> genre.name }
+        text = nameGenres.joinToString(", ")
+    }
+}
+
+@BindingAdapter("movieOverview")
+fun TextView.setMovieOverview(movie: Movie?) {
+    movie?.let { text = it.overview }
 }

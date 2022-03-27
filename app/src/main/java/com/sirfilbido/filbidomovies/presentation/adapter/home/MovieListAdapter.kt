@@ -8,27 +8,38 @@ import androidx.recyclerview.widget.RecyclerView
 import com.sirfilbido.filbidomovies.data.model.Movie
 import com.sirfilbido.filbidomovies.databinding.ItemMovieBinding
 
-class MovieListAdapter : ListAdapter<Movie, MovieListAdapter.ImageViewHolder>(ImageDiffCallback()) {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ImageViewHolder {
-        return ImageViewHolder.from(parent)
+class MovieListAdapter(private val onClickListener: OnClickListener) :
+    ListAdapter<Movie, MovieListAdapter.MovieViewHolder>(MovieDiffCallback()) {
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MovieViewHolder {
+        return MovieViewHolder.from(parent)
     }
 
-    override fun onBindViewHolder(holder: ImageViewHolder, position: Int) {
-        holder.bind(getItem(position))
+    override fun onBindViewHolder(holder: MovieViewHolder, position: Int) {
+        val movieItem = getItem(position)
+        holder.bind(movieItem)
+
+        holder.itemView.setOnClickListener {
+            onClickListener.onClick(movieItem)
+        }
     }
 
-    class ImageViewHolder(private val _binding: ItemMovieBinding) :
+    class OnClickListener(val clickListener: (movie: Movie) -> Unit) {
+        fun onClick(movie: Movie) = clickListener(movie)
+    }
+
+    class MovieViewHolder(private val _binding: ItemMovieBinding) :
         RecyclerView.ViewHolder(_binding.root) {
 
         companion object {
-            fun from(parent: ViewGroup): ImageViewHolder {
+            fun from(parent: ViewGroup): MovieViewHolder {
                 val binding: ItemMovieBinding = ItemMovieBinding.inflate(
                     LayoutInflater.from(parent.context),
                     parent,
                     false
                 )
-                return ImageViewHolder(binding)
+                return MovieViewHolder(binding)
             }
         }
 
@@ -38,7 +49,7 @@ class MovieListAdapter : ListAdapter<Movie, MovieListAdapter.ImageViewHolder>(Im
 
     }
 
-    private class ImageDiffCallback : DiffUtil.ItemCallback<Movie>() {
+    private class MovieDiffCallback : DiffUtil.ItemCallback<Movie>() {
         override fun areItemsTheSame(oldItem: Movie, newItem: Movie): Boolean {
             return oldItem.id == newItem.id
         }

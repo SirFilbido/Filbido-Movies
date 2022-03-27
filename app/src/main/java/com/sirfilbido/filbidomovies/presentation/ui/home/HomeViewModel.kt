@@ -52,6 +52,13 @@ class HomeViewModel(
         }
     }
 
+    private val _mutableSelectedItem = MutableLiveData<Movie>()
+    val selectedItem: LiveData<Movie> = _mutableSelectedItem
+
+    fun selectItem(movie: Movie) {
+        _mutableSelectedItem.value = movie
+    }
+
     val helloText = Transformations.map(listMovie) {
         listMovie.let {
             when (it.value) {
