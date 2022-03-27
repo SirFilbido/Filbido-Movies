@@ -3,4 +3,6 @@
     <string name="home_fragment_placeholder">🎬 Loading movies from TMDB...</string>
     <string name="title">Title:</string>
     <string name="releaseDate">Date release:</string>
+    <string name="genre">Genre:</string>
+    <string name="overview">Overview:</string>
 </resources>
