@@ -12,7 +12,7 @@ import kotlinx.coroutines.flow.onStart
 import kotlinx.coroutines.launch
 
 class HomeViewModel(
-    private val _getListNowPlayingUseCase: GetListNowPlayingUseCase,
+    private val getListNowPlayingUseCase: GetListNowPlayingUseCase,
 ) : ViewModel() {
 
     private val _progressBarVisible = MutableLiveData(false)
@@ -38,7 +38,7 @@ class HomeViewModel(
 
     fun fetchMovies() {
         viewModelScope.launch {
-            _getListNowPlayingUseCase()
+            getListNowPlayingUseCase()
                 .onStart {
                     _listMovie.postValue(State.Loading)
                     delay(800)

@@ -12,8 +12,8 @@ class GenreRepositoryImpl(
 ) : GenreRepository {
     override suspend fun getGenres(): Flow<List<Genre>> = flow {
         try {
-            val imageList = service.getAllGenres()
-            emit(imageList.genres)
+            val genresList = service.getAllGenres()
+            emit(genresList.genres)
         } catch (error: HttpException) {
             throw RemoteException("Unable to retrieve genres in TMDB")
         }

@@ -9,7 +9,7 @@ import androidx.navigation.fragment.findNavController
 import com.google.android.material.snackbar.Snackbar
 import com.sirfilbido.filbidomovies.data.model.Movie
 import com.sirfilbido.filbidomovies.databinding.HomeFragmentBinding
-import com.sirfilbido.filbidomovies.presentation.adapter.home.MovieListAdapter
+import com.sirfilbido.filbidomovies.presentation.adapter.movie.MovieListAdapter
 import com.sirfilbido.filbidomovies.presentation.ui.State
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 

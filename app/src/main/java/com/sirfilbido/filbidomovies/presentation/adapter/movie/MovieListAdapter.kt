@@ -1,4 +1,4 @@
-package com.sirfilbido.filbidomovies.presentation.adapter.home
+package com.sirfilbido.filbidomovies.presentation.adapter.movie
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -7,7 +7,6 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.sirfilbido.filbidomovies.data.model.Movie
 import com.sirfilbido.filbidomovies.databinding.ItemMovieBinding
-
 
 class MovieListAdapter(private val onClickListener: OnClickListener) :
     ListAdapter<Movie, MovieListAdapter.MovieViewHolder>(MovieDiffCallback()) {
@@ -29,8 +28,8 @@ class MovieListAdapter(private val onClickListener: OnClickListener) :
         fun onClick(movie: Movie) = clickListener(movie)
     }
 
-    class MovieViewHolder(private val _binding: ItemMovieBinding) :
-        RecyclerView.ViewHolder(_binding.root) {
+    class MovieViewHolder(private val binding: ItemMovieBinding) :
+        RecyclerView.ViewHolder(binding.root) {
 
         companion object {
             fun from(parent: ViewGroup): MovieViewHolder {
@@ -44,7 +43,7 @@ class MovieListAdapter(private val onClickListener: OnClickListener) :
         }
 
         fun bind(item: Movie) {
-            _binding.movie = item
+            binding.movie = item
         }
 
     }

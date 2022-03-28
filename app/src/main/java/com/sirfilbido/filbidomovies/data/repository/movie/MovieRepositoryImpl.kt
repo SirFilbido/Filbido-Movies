@@ -8,13 +8,13 @@ import kotlinx.coroutines.flow.flow
 import retrofit2.HttpException
 
 class MovieRepositoryImpl(
-    private val _service: MovieService,
+    private val service: MovieService,
 ) : MovieRepository {
 
     override suspend fun getListNowPlaying(): Flow<List<MovieResponse>> = flow {
         try {
-            val imageList = _service.getListNowPlaying()
-            emit(imageList.results)
+            val movieList = service.getListNowPlaying()
+            emit(movieList.results)
         } catch (error: HttpException) {
             throw RemoteException("Unable to retrieve movies in TMDB")
         }

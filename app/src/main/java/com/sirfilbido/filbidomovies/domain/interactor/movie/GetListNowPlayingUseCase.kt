@@ -6,25 +6,28 @@ import com.sirfilbido.filbidomovies.data.model.Genre
 import com.sirfilbido.filbidomovies.data.model.Movie
 import com.sirfilbido.filbidomovies.data.repository.movie.MovieRepository
 import com.sirfilbido.filbidomovies.data.services.movie.response.MovieResponse
+import com.sirfilbido.filbidomovies.data.services.movie.response.toMovie
 import com.sirfilbido.filbidomovies.domain.interactor.UseCase.NoParam
 import com.sirfilbido.filbidomovies.domain.interactor.genre.GetGenresUseCase
 import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.flow
-import java.time.LocalDate
-import java.time.format.DateTimeFormatter
+import kotlinx.coroutines.flow.single
 
 class GetListNowPlayingUseCase(
-    private val _repository: MovieRepository,
-    private val _getGenresUseCase: GetGenresUseCase,
+    private val repository: MovieRepository,
+    private val getGenresUseCase: GetGenresUseCase,
 ) : NoParam<List<Movie>>() {
 
     @RequiresApi(Build.VERSION_CODES.O)
-    override suspend fun execute(): Flow<List<Movie>> {
-        val movies = _repository.getListNowPlaying().first()
-        val genres = _getGenresUseCase.execute().first()
-        return toMovies(movies, genres)
+    override suspend fun execute(): Flow<List<Movie>> = try {
+        val movies = repository.getListNowPlaying().single()
+        val genres = getGenresUseCase.execute().single()
+        toMovies(movies, genres)
+    } catch (error: Exception) {
+        println(error.stackTrace.toString())
+        flow { emit(listOf()) }
     }
+
 
     @RequiresApi(Build.VERSION_CODES.O)
     private fun toMovies(
@@ -33,28 +36,7 @@ class GetListNowPlayingUseCase(
     ): Flow<List<Movie>> {
 
         val list = mutableListOf<Movie>()
-
-        movies.map { movie ->
-
-            val listGenres = mutableListOf<Genre>()
-            movie.genres.forEach { idGenres ->
-                listGenres.add(genres.find { genre -> genre.id == idGenres }!!)
-            }
-
-            list.add(
-                Movie(
-                    id = movie.id,
-                    poster = movie.poster,
-                    title = movie.title,
-                    overview = movie.overview,
-                    releaseDate = LocalDate.parse(
-                        movie.releaseDate,
-                        DateTimeFormatter.ISO_DATE
-                    ),
-                    genres = listGenres
-                )
-            )
-        }
+        movies.map { movie -> list.add(movie.toMovie(genres)) }
 
         return flow { emit(list) }
     }
