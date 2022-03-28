@@ -2,6 +2,7 @@
     <string name="app_name">Filbido Movies</string>
     <string name="home_fragment_placeholder">🎬 Loading movies from TMDB...</string>
     <string name="title">Title:</string>
+    <string name="movieTitle">Movie title</string>
     <string name="releaseDate">Date release:</string>
     <string name="genre">Genre:</string>
     <string name="overview">Overview:</string>

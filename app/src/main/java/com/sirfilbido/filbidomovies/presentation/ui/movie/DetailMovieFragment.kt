@@ -21,6 +21,7 @@ class DetailMovieFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+        binding.movieDetailToolbar.setOnClickListener { requireActivity().onBackPressed() }
         binding.viewModel = viewModel
         return binding.root
     }
