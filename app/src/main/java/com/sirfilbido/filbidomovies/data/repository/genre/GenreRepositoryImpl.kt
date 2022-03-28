@@ -8,11 +8,11 @@ import kotlinx.coroutines.flow.flow
 import retrofit2.HttpException
 
 class GenreRepositoryImpl(
-    private val _service: GenresService,
+    private val service: GenresService,
 ) : GenreRepository {
     override suspend fun getGenres(): Flow<List<Genre>> = flow {
         try {
-            val imageList = _service.getAllGenres()
+            val imageList = service.getAllGenres()
             emit(imageList.genres)
         } catch (error: HttpException) {
             throw RemoteException("Unable to retrieve genres in TMDB")
